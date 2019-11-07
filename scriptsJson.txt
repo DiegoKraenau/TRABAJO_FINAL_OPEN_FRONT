@@ -1,0 +1,66 @@
+Rol:
+{
+  "rolDescription": "No puede publicar",
+  "publish": false
+}
+{
+  "rolDescription": "Puede publicar",
+  "publish": true
+}
+ServiceCategory:
+{
+  "categoryName": "Electricidad",
+  "categoryDescription": "Se realizan servicios relacionados a electricidad"
+  
+}
+Location:
+{
+  "country": "Perú",
+  "city": "Lima",
+  "state": "Chorrillos",
+  "address": "Av.sol"
+}
+Usuario:
+{
+  "role": {
+    "id": 2
+  },
+  "userName": "jorgekraenau@gmail.com",
+  "userPassword": "jorge2009"
+}
+Supplier:
+{
+  "age": 68,
+  "email": "jorgekraenau@mail.com",
+  "gender": "jorge2009",
+  "lastName": "Kraenau",
+  "location": {
+    "id": 1
+  },
+  "name": "Jorge",
+  "phone": "879879789",
+  "usuario": {
+    "id": 1
+  }
+}
+
+Servicio:
+{
+  "category": {
+    "id": 1
+  },
+  "cost": "30",
+  "description": "asfas",
+  "name": "Electricidad"
+}
+Detalle:
+{
+
+  "servicioDetail": {
+   "id": 1
+  },
+  "supplierDetail": {
+    "id": 3
+   }
+    
+}
