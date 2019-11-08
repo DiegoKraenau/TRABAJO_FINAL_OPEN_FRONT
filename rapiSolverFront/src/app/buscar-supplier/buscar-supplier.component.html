@@ -1,0 +1,53 @@
+<html lang="en">
+<head>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <a class="navbar-brand" href="#" v-on:click.prevent="viñeta">RapiSolver</a>
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a class="nav-link" href="" v-on:click.prevent="miperfil">Mi perfil</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="" v-on:click.prevent="post">Publicar Servicio</a>
+    </li>
+     <li class="nav-item">
+      <a class="nav-link" href="" v-on:click.prevent="post2">Buscar Servicio</a>
+    </li>
+     <li class="nav-item">
+      <a class="nav-link" href="#">Buscar Personas</a>
+    </li>
+  </ul>
+</nav>
+
+<input type="text" id="myInput"   placeholder="Search for names..">
+
+<table id="myTable">
+  <tr class="header">
+    <th ></th>
+    <th >Nombre</th>
+    <th >Apellido</th>
+    <th >Email</th>
+    <th >Telefono</th>
+    <th >Detalle</th>
+  </tr>
+ <tbody>
+  <ng-container *ngFor="let supplier of suppliersGroup">
+    <tr>
+        <td ><img src="../assets/img_avatar.png" alt="Avatar" width="50px" height="50px"></td>
+        <td>{{supplier.name}}</td>
+        <td>{{supplier.lastName}}</td>
+        <td>{{supplier.email}}</td>
+        <td>{{supplier.phone}}</td>
+        <td><a href="#" class="btn btn-primary">Ver perfil</a></td>	
+       
+    </tr>
+</ng-container>
+            
+</tbody>
+</table>
+
+
+</body>
+</html>

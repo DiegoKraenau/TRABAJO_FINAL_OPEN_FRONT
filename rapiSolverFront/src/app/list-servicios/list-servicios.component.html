@@ -31,10 +31,10 @@
                 <div class="card-header text-white bg-secondary" >Buscar Servicios</div>
                 <div class="card-body">
                     <div class="form-inline">
-                        <form >
+                        <form (ngSubmit)="buscarByNombre()">
                             <div class="row">
                                 <div class="col-8">
-                                    <input  type="text" class="form-control" id="servicioNombre" name="servicioNombre" placeholder="Buscar por nombre"  >
+                                    <input  type="text" class="form-control" id="servicioNombre" name="servicioNombre" placeholder="Buscar por nombre"  [(ngModel)]="servicioNombre">
                                 </div>
                                 <div class="col">
                                     <button type="submit" class="btn btn-danger"  >Buscar</button>

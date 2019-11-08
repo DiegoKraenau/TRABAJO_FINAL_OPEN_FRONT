@@ -13,6 +13,7 @@ import { Observable } from 'rxjs';
 export class ListServiciosComponent implements OnInit {
 
   detallesGroup :Detalle[];
+  servicioNombre="";
 
   constructor(private servicioService: ServicioService) { }
 
@@ -27,4 +28,12 @@ export class ListServiciosComponent implements OnInit {
 {
   window.location.href="/detalleServicio/"+codigo
 }
+
+private buscarByNombre():void
+{
+  this.detallesGroup=null;
+  this.servicioService.getDetallesByServiceName(this.servicioNombre).subscribe(detallesGroup=>this.detallesGroup=detallesGroup);
+}
+
+
 }

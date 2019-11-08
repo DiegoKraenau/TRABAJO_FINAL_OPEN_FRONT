@@ -22,4 +22,9 @@ export class ServicioService {
   createCliente(detalle: Object): Observable<Object>{
     return this.http.post(`${this.baseURL}`, detalle);
   }
+
+  getDetallesByServiceName(name:string): Observable<any>{
+    return this.http.get(`${this.baseURL}/searchByServiceName/${name}`);
+    
+  }
 }
