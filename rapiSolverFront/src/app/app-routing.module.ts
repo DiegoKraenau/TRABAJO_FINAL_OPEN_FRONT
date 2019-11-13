@@ -4,7 +4,7 @@ import { ListServiciosComponent } from './list-servicios/list-servicios.componen
 import { DetalleServicioComponent } from './detalle-servicio/detalle-servicio.component';
 import { AgregarServicioComponent } from './agregar-servicio/agregar-servicio.component';
 import { BuscarSupplierComponent } from './buscar-supplier/buscar-supplier.component';
-
+import { VerSupplierComponent } from './ver-supplier/ver-supplier.component';
 
 
 
@@ -13,7 +13,8 @@ const routes: Routes = [
   {path:'listarServicios', component: ListServiciosComponent},
   {path:'detalleServicio/:id', component: DetalleServicioComponent},
   {path:'agregarServicio/:id', component: AgregarServicioComponent},
-  {path:'buscarSupplier/:id', component: BuscarSupplierComponent}
+  {path:'buscarSupplier/:id', component: BuscarSupplierComponent},
+  {path:'verSupplier/:id/:id2', component: VerSupplierComponent}
   
 ];
 

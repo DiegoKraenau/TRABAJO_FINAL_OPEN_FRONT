@@ -21,7 +21,7 @@
   </ul>
 </nav>
 
-<input type="text" id="myInput"   placeholder="Search for names..">
+<input type="text" id="myInput"   (keyup)="myFunction()" placeholder="Search for names..">
 
 <table id="myTable">
   <tr class="header">
@@ -41,7 +41,6 @@
         <td>{{supplier.email}}</td>
         <td>{{supplier.phone}}</td>
         <td><a href="#" class="btn btn-primary">Ver perfil</a></td>	
-       
     </tr>
 </ng-container>
             
