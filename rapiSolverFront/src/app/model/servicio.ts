@@ -1,7 +1,7 @@
 import { Categoria } from './categoria';
 
 export class Servicio {
-    category : Categoria;
+    nombreCategoria : string;
     cost : string;
     description : string;
     id : number;

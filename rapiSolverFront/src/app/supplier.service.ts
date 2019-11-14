@@ -15,4 +15,12 @@ export class SupplierService {
     return this.http.get(`${this.baseURL}`);
     
   }
+
+  getServiciosListByUserId(id:number): Observable<any>{
+    return this.http.get(`${this.baseURL}/serviciosByUserId/${id}`);
+  }
+
+  getSupplierByUserId(id: number): Observable<any>{
+    return this.http.get(`${this.baseURL}/searchByUserId/${id}`);
+  }
 }

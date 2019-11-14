@@ -26,7 +26,8 @@ export class ListServiciosComponent implements OnInit {
   }
   private myMethod(codigo:number):void
 {
-  window.location.href="/detalleServicio/"+codigo
+  window.location.href="/detalleServicio/2"
+
 }
 
 private buscarByNombre():void

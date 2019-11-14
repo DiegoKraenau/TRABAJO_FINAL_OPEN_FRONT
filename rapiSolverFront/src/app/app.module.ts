@@ -9,11 +9,8 @@ import { FormsModule } from '@angular/forms';
 import { DetalleServicioComponent } from './detalle-servicio/detalle-servicio.component';
 import { AgregarServicioComponent } from './agregar-servicio/agregar-servicio.component';
 import { BuscarSupplierComponent } from './buscar-supplier/buscar-supplier.component';
-<<<<<<< HEAD
 import { VerSupplierComponent } from './ver-supplier/ver-supplier.component';
-=======
-import { MiPerfilComponent } from './mi-perfil/mi-perfil.component';
->>>>>>> 466aeea76e1829eb1a275b45f85547d23a1ad591
+import { VerPerfilComponent } from './ver-perfil/ver-perfil.component';
 
 @NgModule({
   declarations: [
@@ -22,11 +19,8 @@ import { MiPerfilComponent } from './mi-perfil/mi-perfil.component';
     DetalleServicioComponent,
     AgregarServicioComponent,
     BuscarSupplierComponent,
-<<<<<<< HEAD
-    VerSupplierComponent
-=======
-    MiPerfilComponent
->>>>>>> 466aeea76e1829eb1a275b45f85547d23a1ad591
+    VerSupplierComponent,
+    VerPerfilComponent
   ],
   imports: [
     BrowserModule,
