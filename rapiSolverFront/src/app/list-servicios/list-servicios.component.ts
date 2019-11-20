@@ -4,6 +4,7 @@ import { UsuarioService } from '../usuario.service';
 import { Detalle } from '../model/detalle';
 import { Usuario } from '../model/usuario';
 import { Observable } from 'rxjs';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-list-servicios',
@@ -15,7 +16,7 @@ export class ListServiciosComponent implements OnInit {
   detallesGroup :Detalle[];
   servicioNombre="";
 
-  constructor(private servicioService: ServicioService) { }
+  constructor(private servicioService: ServicioService,private route: ActivatedRoute) { }
 
   ngOnInit() {
     this.loadData();
@@ -26,7 +27,7 @@ export class ListServiciosComponent implements OnInit {
   }
   private myMethod(codigo:number):void
 {
-  window.location.href="/detalleServicio/2"
+  window.location.href="/detalleServicio/"+codigo+"/"+this.route.snapshot.params.id
 
 }
 

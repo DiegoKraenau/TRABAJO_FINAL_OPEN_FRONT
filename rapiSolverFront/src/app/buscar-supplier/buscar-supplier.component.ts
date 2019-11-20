@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Supplier } from '../model/supplier';
 import { SupplierService } from '../supplier.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-buscar-supplier',
@@ -11,7 +12,7 @@ export class BuscarSupplierComponent implements OnInit {
 
   suppliersGroup :Supplier[];
 
-  constructor(private supplierService: SupplierService) { }
+  constructor(private supplierService: SupplierService,private route: ActivatedRoute) { }
 
   ngOnInit() {
     this.loadData();
@@ -42,4 +43,15 @@ export class BuscarSupplierComponent implements OnInit {
   }
 }
 
+private verPerfil(codigo:number):void
+  {
+
+    window.location.href="/verSupplier/"+codigo+"/"+this.route.snapshot.params.id
+
+  
+  }
+
 }
+
+
+

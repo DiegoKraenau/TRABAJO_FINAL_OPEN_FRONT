@@ -65,6 +65,14 @@ registrarRecomendacion(){
 
 }
 
+private agregarReserva(codigo:number):void
+{
+
+  window.location.href="/agregarReserva/"+this.route.snapshot.params.id2+"/"+codigo
+
+
+}
+
 
 
 }

@@ -23,6 +23,21 @@ export class DetalleServicioComponent implements OnInit {
     this.servicioService.getDetalleById(parseInt(this.route.snapshot.params.id)).subscribe(d1=>this.d1=d1);
   }
 
+  private verPerfil(codigo:number):void
+  {
+
+    window.location.href="/verSupplier/"+codigo+"/"+this.route.snapshot.params.id2
+
+  
+  }
+
+  private agregarReserva(codigo:number):void
+  {
+
+    window.location.href="/agregarReserva/"+this.route.snapshot.params.id2+"/"+codigo
+
+  
+  }
  
 
 }

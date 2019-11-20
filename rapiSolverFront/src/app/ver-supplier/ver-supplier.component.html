@@ -17,29 +17,37 @@
 <link href="../assets/static/css/agency.min.css" rel="stylesheet">
 </head>
 <body>
-<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-    <a class="navbar-brand" href="" id="logo" v-on:click.prevent="rapi">RapiSolver</a>
-  <ul class="navbar-nav">
-    <li class="nav-item">
-      <a class="nav-link" href="" v-on:click.prevent="miperfil">Mi perfil</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href=""  v-on:click.prevent="publicarServicio">Publicar Servicio</a>
-    </li>
-     <li class="nav-item">
-      <a class="nav-link" href="" v-on:click.prevent="buscarServicio">Buscar Servicio</a>
-    </li>
-     <li class="nav-item">
-      <a class="nav-link" href="" v-on:click.prevent="buscarPersonas">Buscar Personas</a>
-    </li>
-  </ul>
-</nav>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <a class="navbar-brand" id="logo" href="#" >RapiSolver</a>
+         <div id="navbarNavDropdown" class="navbar-collapse collapse">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                       <a class="nav-link" [routerLink]="['/miPerfil/',this.route.snapshot.params.id2 ]">Mi perfil</a>
+                   </li>
+                   <li class="nav-item">
+                      <a class="nav-link" [routerLink]="['/agregarServicio/',this.route.snapshot.params.id2 ]">Publicar Servicio</a>
+                   </li>
+                   <li class="nav-item">
+                       <a class="nav-link" [routerLink]="['/listarServicios/',this.route.snapshot.params.id2 ]">Buscar Servicio</a>
+                    </li>
+                   <li class="nav-item">
+                      <a class="nav-link" [routerLink]="['/buscarSupplier/',this.route.snapshot.params.id2 ]">Buscar Proveedor</a>
+                   </li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                      <a href=""  class="btn btn-info btn-lg"> <span class="glyphicon glyphicon-log-out"></span> Salir </a>
+                    </li>
+                </ul>
+            </div>
+      
+    </nav>
 <br>
 <br>
 <div class="container">
   <div class="card">
     <div class="front">
-      <div class="logo"><span></span></div>
+      <img src="../assets/img_avatar.png" alt="Avatar" style="width:300px;height:300px;">
     </div>
     <div class="back">
       <h1>{{supplier.name}}<span>{{supplier.lastName}}</span></h1>
@@ -164,8 +172,9 @@
     <h1 id="h1name">{{servicio.name}}</h1>
     <p class="price" >{{servicio.cost}}	S/</p>
     <p class="description" >{{servicio.description}}</p>
-    <p><button>Contactar</button></p>
+    <p><button  (click)="agregarReserva(servicio.id)">Contactar</button></p>
   </div>
+  <br>
   </ng-container>
   </div>
   

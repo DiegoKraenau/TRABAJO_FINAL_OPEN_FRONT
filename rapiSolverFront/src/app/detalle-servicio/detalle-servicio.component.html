@@ -1,27 +1,45 @@
 <html lang="en">
     <head>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script'
+        rel='stylesheet' type='text/css'>
+    <link
+        href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic'
+        rel='stylesheet' type='text/css'>
+    <link
+    href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700'
+    rel='stylesheet' type='text/css'>
+    <link href="../assets/static/css/agency.min.css" rel="stylesheet">
     </head>
     <body>
         
-    
-        <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-        <a class="navbar-brand" href="">RapiSolver</a>
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" href="" >Mi perfil</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#" >Publicar Servicio</a>
-        </li>
-         <li class="nav-item">
-          <a class="nav-link" href="">Buscar Servicio</a>
-        </li>
-         <li class="nav-item">
-          <a class="nav-link" href="">Buscar Personas</a>
-        </li>
-      </ul>
-    </nav>
+            <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+                    <a class="navbar-brand" id="logo" href="#" >RapiSolver</a>
+                     <div id="navbarNavDropdown" class="navbar-collapse collapse">
+                            <ul class="navbar-nav mr-auto">
+                                <li class="nav-item">
+                                   <a class="nav-link" [routerLink]="['/miPerfil/',this.route.snapshot.params.id2 ]">Mi perfil</a>
+                               </li>
+                               <li class="nav-item">
+                                  <a class="nav-link" [routerLink]="['/agregarServicio/',this.route.snapshot.params.id2 ]">Publicar Servicio</a>
+                               </li>
+                               <li class="nav-item">
+                                   <a class="nav-link" [routerLink]="['/listarServicios/',this.route.snapshot.params.id2 ]">Buscar Servicio</a>
+                                </li>
+                               <li class="nav-item">
+                                  <a class="nav-link" [routerLink]="['/buscarSupplier/',this.route.snapshot.params.id2 ]">Buscar Proveedor</a>
+                               </li>
+                            </ul>
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                  <a href=""  class="btn btn-info btn-lg"> <span class="glyphicon glyphicon-log-out"></span> Salir </a>
+                                </li>
+                            </ul>
+                        </div>
+                  
+                </nav>
     
     <br/>
     <br/>
@@ -39,7 +57,7 @@
                     </ul>
                     <br>
                 
-                    <a  href=""  class="btn btn-success">Reservar</a>
+                    <button  href=""  class="btn btn-success" (click)="agregarReserva(d1.serviceDetailsId)">Reservar</button>
             
                 </div>
             </div>
@@ -58,7 +76,7 @@
                               <span class="fa fa-star"></span>
                               <br>
                               <br>
-                            <a href="" class="btn btn-primary">Ver perfil</a>
+                            <button  class="btn btn-primary"  (click)="verPerfil(d1.serviceDetailsId)">Ver perfil</button>
                             <br>
                             <br>
                      </div>     
