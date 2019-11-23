@@ -12,6 +12,7 @@ import { RegistroUsuarioComponent } from './registro-usuario/registro-usuario.co
 import { EditarMiperfilComponent } from './editar-miperfil/editar-miperfil.component';
 import { IndexComponent } from './index/index.component';
 import { AgregarUsuarioComponent } from './agregar-usuario/agregar-usuario.component';
+import { ComprarMembresiaComponent } from './comprar-membresia/comprar-membresia.component';
 
 
 const routes: Routes = [
@@ -28,6 +29,7 @@ const routes: Routes = [
   {path: 'editarmiperfil/:id', component: EditarMiperfilComponent},
   {path: 'index', component: IndexComponent},
   {path: 'agregarUsuario', component: AgregarUsuarioComponent},
+  {path: 'comprarMembresia/:id', component: ComprarMembresiaComponent}
 
 ];
 

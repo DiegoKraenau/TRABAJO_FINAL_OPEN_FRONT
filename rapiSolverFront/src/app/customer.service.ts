@@ -26,4 +26,8 @@ export class CustomerService {
   findByUserId(id:number): Observable<any>{
     return this.http.get(`${this.baseURL}/searchByUserId/${id}`);
   }
+
+  comprarMembresia(id:number): Observable<any>{
+    return this.http.get(`${this.baseURL}/${id}/addPackage`);
+  }
 }

@@ -19,6 +19,7 @@ import { LoginUsuarioComponent } from './login-usuario/login-usuario.component';
 import { EditarMiperfilComponent } from './editar-miperfil/editar-miperfil.component';
 import { IndexComponent } from './index/index.component';
 import { AgregarUsuarioComponent } from './agregar-usuario/agregar-usuario.component';
+import { ComprarMembresiaComponent } from './comprar-membresia/comprar-membresia.component';
 
 
 @NgModule({
@@ -37,7 +38,8 @@ import { AgregarUsuarioComponent } from './agregar-usuario/agregar-usuario.compo
     LoginUsuarioComponent,
     EditarMiperfilComponent,
     IndexComponent,
-    AgregarUsuarioComponent
+    AgregarUsuarioComponent,
+    ComprarMembresiaComponent
 
   ],
   imports: [
