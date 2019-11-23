@@ -30,4 +30,7 @@ export class CustomerService {
   updateCustomer(id: number, customer: Object): Observable<Object>{
     return this.http.put(`${this.baseURL}/${id}`, customer);
   }
+  comprarMembresia(id:number): Observable<any>{
+    return this.http.get(`${this.baseURL}/${id}/addPackage`);
+  }
 }

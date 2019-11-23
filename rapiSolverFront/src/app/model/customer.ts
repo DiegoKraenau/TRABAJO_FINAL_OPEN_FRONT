@@ -13,4 +13,5 @@ export class Customer {
      city:string;
      state:string;
      address:string;
+     userPassword:string;
 }

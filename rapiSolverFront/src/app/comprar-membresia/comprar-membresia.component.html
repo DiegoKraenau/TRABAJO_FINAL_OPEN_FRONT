@@ -1,0 +1,96 @@
+<html lang="en">
+<head>
+  <!-- Custom fonts for this template -->
+<link href="../assets/static/vendor/fontawesome-free/css/all.min.css" rel="stylesheet"
+	type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700"
+	rel="stylesheet" type="text/css">
+<link href='https://fonts.googleapis.com/css?family=Kaushan+Script'
+	rel='stylesheet' type='text/css'>
+<link
+	href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic'
+	rel='stylesheet' type='text/css'>
+<link
+	href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700'
+	rel='stylesheet' type='text/css'>
+
+<!-- Custom styles for this template -->
+<link href="../assets/static/css/agency.min.css" rel="stylesheet">
+
+</head>
+<body>
+
+ <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <a class="navbar-brand" id="logo" href="#" v-on:click.prevent="rapi">RapiSolver</a>
+     <div id="navbarNavDropdown" class="navbar-collapse collapse">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                   <a class="nav-link" href="" >Mi perfil</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="#"  >Publicar Servicio</a>
+               </li>
+               <li class="nav-item">
+                   <a class="nav-link" href="">Buscar Servicio</a>
+                </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="" >Buscar Proveedor</a>
+               </li>
+            </ul>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a href=""  class="btn btn-info btn-lg" style="background-color:#6c757d; border-color:#6c757d" > <span class="glyphicon glyphicon-log-out"></span> Salir </a>
+                </li>
+            </ul>
+        </div>
+  
+</nav>
+
+<div id="mensaje2" class="alert alert-success" role="alert" style="display: none">
+   <strong> <p class="padd-top" id="mensaje"></p></strong>
+</div>
+<div id="mensaje4" class="alert alert-danger" role="alert" style="display: none">
+   <strong> <p class="padd-top" id="mensaje3"></p></strong>
+</div>
+<br>
+<br>
+<br>
+<h2 style="text-align:center">Paquete de membresía</h2>
+<p style="text-align:center">Escoge tu paquete ideal para publicar tus servicios</p>
+
+<div class="columns">
+  <ul class="price">
+    <li class="header">Basic</li>
+    <li class="grey">30 S/ por 1 mes</li>
+    <li>Poder publicar servicios ilimitados durante 1 mes</li>
+    <li>No existe descuento</li>
+ 
+    <li class="grey"><button  class="btn tbn-primary"  (click)="comprarMembresiA()">Comprar</button></li>
+  </ul>
+</div>
+
+<div class="columns">
+  <ul class="price">
+    <li class="header" style="background-color:#fed136">Pro</li>
+    <li class="grey">160 S/ por 6 meses</li>
+    <li>Poder publicar servicios ilimitados durante 6 mes</li>
+    <li>Existe un descuento de 20 soles</li>
+ 
+    <li class="grey"><button  class="btn tbn-primary"  (click)="comprarMembresiA()">Comprar</button></li>
+  </ul>
+</div>
+
+<div class="columns">
+  <ul class="price">
+    <li class="header">Premium</li>
+    <li class="grey">320 S/ por 1 año</li>
+    <li>Poder publicar servicios ilimitados durante 1 año</li>
+    <li>Existe un descuento de 40 soles</li>
+ 
+    <li class="grey"><button  class="btn tbn-primary"  (click)="comprarMembresiA()">Comprar</button></li>
+  </ul>
+</div>
+
+
+</body>
+</html>
