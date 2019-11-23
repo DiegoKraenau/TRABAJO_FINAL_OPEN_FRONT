@@ -1,0 +1,76 @@
+<html lang="en">
+    <head>
+        <!-- Custom fonts for this template -->
+    <link href="../../assets/static/vendor/fontawesome-free/css/all.min.css" rel="stylesheet"
+        type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700"
+        rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script'
+        rel='stylesheet' type='text/css'>
+    <link
+        href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic'
+        rel='stylesheet' type='text/css'>
+    <link
+        href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700'
+        rel='stylesheet' type='text/css'>
+    
+    <!-- Custom styles for this template -->
+    <link href="../../assets/static/css/agency.min.css" rel="stylesheet">
+    </head>
+    <body>
+    
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+            <a class="navbar-brand" id="logo" href="#" >RapiSolver</a>
+             <div id="navbarNavDropdown" class="navbar-collapse collapse">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                           <a class="nav-link" [routerLink]="['/miPerfil/',this.route.snapshot.params.id ]">Mi perfil</a>
+                       </li>
+                       <li class="nav-item">
+                          <a class="nav-link" [routerLink]="['/agregarServicio/',this.route.snapshot.params.id ]">Publicar Servicio</a>
+                       </li>
+                       <li class="nav-item">
+                           <a class="nav-link" [routerLink]="['/listarServicios/',this.route.snapshot.params.id ]">Buscar Servicio</a>
+                        </li>
+                       <li class="nav-item">
+                          <a class="nav-link" [routerLink]="['/buscarSupplier/',this.route.snapshot.params.id ]">Buscar Proveedor</a>
+                       </li>
+                    </ul>
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                          <a href="" [routerLink]="['/login/']" class="btn btn-info btn-lg"> <span class="glyphicon glyphicon-log-out"></span> Salir </a>
+                        </li>
+                    </ul>
+                </div>
+          
+        </nav>
+     <div id="mensaje2" class="alert alert-success " style="display: none">
+                <strong> <p class="padd-top" id="mensaje"></p></strong>
+    </div>
+    <br>
+    <div id="labelCrearUsuario"><h2>Editar Servicio</h2></div><br>
+    <form id="formulario"  >
+            <div class="form-group" >
+                <label >Nombre:</label> <input  type="text" id="lbl1" class="form-control col-lg-3 col-md-3 col-xs-12"  placeholder="Ingrese nombre del servicio"   minlength="5" maxlength="40" required pattern="[A-Za-z]+"> 
+            </div>
+            <div class="form-group" >
+                <label >Descripcion:</label> <br><textarea id="lbl2" class="form-control col-lg-3 col-md-3 col-xs-12" name="comentarios" rows="10" cols="40" minlength="5" maxlength="100" required pattern="[A-Za-z]+">Escribe aquí tus comentarios</textarea>   
+            </div>
+            <div class="form-group" >
+                <label >Costo:</label> <input type="text" id="lbl3" class="form-control col-lg-3 col-md-3 col-xs-12" placeholder="Ingrese el costo del servicio" > 
+            </div>
+            <div class="form-group" >
+                <label >Categoria:</label><br>
+               <select class="browser-default custom-select form-control col-lg-3 col-md-3 col-xs-12" >
+                    <option selected >Seleccion la categoria</option>
+                    <option  >categorias</option>
+                </select>
+            </div>
+            <div class="form-group" >
+                
+            </div>
+             <button type="submit" class="btn btn-primary">Editar</button>
+        </form>
+    
+    
+    </body>
