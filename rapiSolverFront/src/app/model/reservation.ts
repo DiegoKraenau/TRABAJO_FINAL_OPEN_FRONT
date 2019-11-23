@@ -1,5 +1,4 @@
 export class Reservation {
-
    	id:number;
 	servicioId:number;
 	usuarioId:number;

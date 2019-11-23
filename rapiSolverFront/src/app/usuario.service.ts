@@ -10,8 +10,8 @@ export class UsuarioService {
 
   constructor(private http: HttpClient) { }
 
-  createUsuario(): Observable<Object>{
-    return this.http.get(`${this.baseURL}`);
+  createUsuario(usuario: Object): Observable<Object>{
+    return this.http.get(`${this.baseURL}`, usuario);
   }
   
   findByUserId(id: number): Observable<any>{

@@ -4,55 +4,22 @@
         <div class="card">
             <div class="card-body">
                 <h5 class="card-title text-center">Registrate</h5>
-                <form id="formulario" v-on:submit.prevent="post" class="form-signin" >
+                <form (ngSubmit)="registrarUsuario()" id="formulario" class="form-signin" >
                     <div class="form-group" >
                         <label for="nombres">Nombres:</label> 
-                        <input type="text" class="form-control" placeholder="Ingrese Nombres" minlength="5" maxlength="40" required pattern="[A-Za-z]+"> 
+                        <input type="text" class="form-control" placeholder="Ingrese Nombres" minlength="5" maxlength="40" required pattern="[A-Za-z]+" name="nombres" [(ngModel)]="cliente.name"> 
                     </div>
                     <div class="form-group" >
                         <label for="apellidos">Apellidos:</label> 
-                        <input type="text" class="form-control" placeholder="Ingrese Apellidos" minlength="5" maxlength="40" required pattern="[A-Za-z]+">  
-                    </div>
-                    <div class="form-group" >
-                        <label for="telefono">Telefono:</label> 
-                        <input type="text" class="form-control" placeholder="Ingrese Telefono" minlength="7" maxlength="9">  
-                    </div>
-                    <div class="form-group">
-                        <label for="gender">Genero:</label>
-                        <select class="form-control">
-                            <option>Masculino</option>
-                            <option>Femenino</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="edad">Edad:</label>
-                        <input type="number" class="form-control" placeholder="Ingrese su edad" minlength="2">
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="pais">Pais:</label>
-                            <input type="text" class="form-control" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="ciudad">Ciudad:</label>
-                            <input type="text" class="form-control" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="distrito">Distrito:</label>
-                            <input type="text" class="form-control" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="direccion">Dirección:</label>
-                            <input type="text" class="form-control" required>
-                        </div>                     
+                        <input type="text" class="form-control" placeholder="Ingrese Apellidos" minlength="5" maxlength="40" required pattern="[A-Za-z]+" name="apellidos" [(ngModel)]="cliente.lastName">  
                     </div>
                     <div class="form-group" >
                         <label for="email">Email:</label> 
-                        <input type="email" class="form-control" placeholder="Ingrese un email"> 
+                        <input type="email" class="form-control" placeholder="Ingrese un email" name="correo" [(ngModel)]="usuario.correo"> 
                     </div>
                     <div class="form-group" >
                         <label for="contraseña">Contraseña::</label> 
-                        <input type="password" class="form-control" placeholder="Ingrese una contraseña" minlength="5" maxlength="40" > 
+                        <input type="password" class="form-control" placeholder="Ingrese una contraseña" name="password" minlength="5" maxlength="40" [(ngModel)]="usuario.userPassword"> 
                     </div> 
                     <div class="form-group">
                         <button  type="submit"  class="btn btn-primary btn-lg">Registrarse</button>  
