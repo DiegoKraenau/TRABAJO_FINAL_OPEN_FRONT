@@ -13,6 +13,7 @@ import { EditarMiperfilComponent } from './editar-miperfil/editar-miperfil.compo
 import { IndexComponent } from './index/index.component';
 import { AgregarUsuarioComponent } from './agregar-usuario/agregar-usuario.component';
 import { ComprarMembresiaComponent } from './comprar-membresia/comprar-membresia.component';
+import { ModificarServicioComponent } from './modificar-servicio/modificar-servicio.component';
 
 
 const routes: Routes = [
@@ -29,7 +30,8 @@ const routes: Routes = [
   {path: 'editarmiperfil/:id', component: EditarMiperfilComponent},
   {path: 'index', component: IndexComponent},
   {path: 'agregarUsuario', component: AgregarUsuarioComponent},
-  {path: 'comprarMembresia/:id', component: ComprarMembresiaComponent}
+  {path: 'comprarMembresia/:id', component: ComprarMembresiaComponent},
+  {path: 'modificarServicio/:id/:id2', component: ModificarServicioComponent}
 
 ];
 

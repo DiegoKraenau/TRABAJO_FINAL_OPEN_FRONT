@@ -69,9 +69,9 @@
                 </p>
                 <strong><p class="padd-top" id="mensajeMembresia"></p></strong>   
          
-                <td><a href=""  class="btn btn-light">Editar</a></td>   
+                <td><a href="" [routerLink]="['/editarmiperfil/',this.route.snapshot.params.id ]" class="btn btn-light">Editar</a></td>   
                 <br>
-                <a href="#"  >Comprar subscripción</a>
+                <a href="" [routerLink]="['/comprarMembresia/',this.route.snapshot.params.id ]" >Comprar subscripción</a>
             </div> 
 
 
@@ -103,8 +103,8 @@
 								<td >{{detalle.name}}</td>
 								<td >{{detalle.id}}</td>
 								<td >{{detalle.cost}}</td>
-								<td><a href="#" class="btn btn-success" >Modificar</a></td>
-                                <td><a href="#" class="btn btn-danger" >Eliminar</a></td>								
+								<td><a href="" (click)="verPerfil(usuario.id)" class="btn btn-success" >Modificar</a></td>
+                                <td><a href="" class="btn btn-danger" >Eliminar</a></td>								
               </tr>
             </ng-container>
 						</tbody>
