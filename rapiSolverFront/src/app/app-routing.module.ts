@@ -6,6 +6,8 @@ import { AgregarServicioComponent } from './agregar-servicio/agregar-servicio.co
 import { BuscarSupplierComponent } from './buscar-supplier/buscar-supplier.component';
 import { VerSupplierComponent } from './ver-supplier/ver-supplier.component';
 import { AgregarReservaComponent } from './agregar-reserva/agregar-reserva.component';
+import { MiPerfilComponent } from './mi-perfil/mi-perfil.component';
+
 
 
 const routes: Routes = [
@@ -15,7 +17,8 @@ const routes: Routes = [
   {path:'agregarServicio/:id', component: AgregarServicioComponent},
   {path:'buscarSupplier/:id', component: BuscarSupplierComponent},
   {path:'verSupplier/:id/:id2', component: VerSupplierComponent},
-  {path:'agregarReserva/:id/:id2', component: AgregarReservaComponent}
+  {path:'agregarReserva/:id/:id2', component: AgregarReservaComponent},
+  {path:'miPerfil/:id', component: MiPerfilComponent},
   
 ];
 
