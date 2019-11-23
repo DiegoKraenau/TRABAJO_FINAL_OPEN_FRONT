@@ -19,7 +19,7 @@ const routes: Routes = [
   {path:'verSupplier/:id/:id2', component: VerSupplierComponent},
   {path:'agregarReserva/:id/:id2', component: AgregarReservaComponent},
   {path:'login', component: LoginUsuarioComponent},
-  {path: 'registro', component: RegistroUsuarioComponent}
+  {path:'registro', component: RegistroUsuarioComponent}
 ];
 
 @NgModule({

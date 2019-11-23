@@ -1,7 +1,7 @@
 <br>
 <div class="container">
     <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
-        <div class="card my-5">
+        <div class="card">
             <div class="card-body">
                 <h5 class="card-title text-center">Registrate</h5>
                 <form id="formulario" v-on:submit.prevent="post" class="form-signin" >
@@ -27,6 +27,24 @@
                     <div class="form-group">
                         <label for="edad">Edad:</label>
                         <input type="number" class="form-control" placeholder="Ingrese su edad" minlength="2">
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="pais">Pais:</label>
+                            <input type="text" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="ciudad">Ciudad:</label>
+                            <input type="text" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="distrito">Distrito:</label>
+                            <input type="text" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="direccion">Dirección:</label>
+                            <input type="text" class="form-control" required>
+                        </div>                     
                     </div>
                     <div class="form-group" >
                         <label for="email">Email:</label> 
