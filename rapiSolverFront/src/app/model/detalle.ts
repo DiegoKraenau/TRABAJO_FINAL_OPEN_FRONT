@@ -1,49 +1,25 @@
 export class Detalle {
-
-    serviceDetailsId:number;
-
-     SupplierId:number;
-
-     ServicioId:number;
-
-     Name:string;
-
-   
-     LastNam:string;
-
-  
-     Email:string;
-
- 
-     Phone:string;
-
-     
-     Age:number;
-
-     
-     Genger:string;
-
-     usuarioId:number;
-
-     LocationId:number;
-
-     UserName:string;
-
-     Country:string;
+  serviceDetailsId:number;
+  SupplierId:number;
+  ServicioId:number;
+  Name:string;
+  LastNam:string;
+  Email:string;
+  Phone:string;
+  Age:number;
+  Genger:string;
+  usuarioId:number;
+  LocationId:number;
+  UserName:string;
+  Country:string;
 
 
 
-    //SERVICIO
+  //SERVICIO
 
-      ServiceName:string;
-
-   
-     Description:string;
-
-    
-     cost:string;
-
-     ServiceCategoryId:number;
-
-     CategoryName:string;
+  ServiceName:string;
+  Description:string;
+  cost:string;
+  ServiceCategoryId:number;
+  CategoryName:string;
 }
