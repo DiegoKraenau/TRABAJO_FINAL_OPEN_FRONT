@@ -22,4 +22,8 @@ export class SupplierService {
   getSupplierByUserId(id: number): Observable<any>{
     return this.http.get(`${this.baseURL}/searchByUserId/${id}`);
   }
+
+  findByUserId(id: number): Observable<any>{
+    return this.http.get(`${this.baseURL}/searchByUserId/${id}`);
+  }
 }

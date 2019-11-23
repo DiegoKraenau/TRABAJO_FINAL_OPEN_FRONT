@@ -12,13 +12,11 @@ import { BuscarSupplierComponent } from './buscar-supplier/buscar-supplier.compo
 import { VerSupplierComponent } from './ver-supplier/ver-supplier.component';
 import { VerPerfilComponent } from './ver-perfil/ver-perfil.component';
 import { AgregarReservaComponent } from './agregar-reserva/agregar-reserva.component';
-<<<<<<< HEAD
 import { MiPerfilComponent } from './mi-perfil/mi-perfil.component';
-=======
 import { BarraNavegacionComponent } from './barra-navegacion/barra-navegacion.component';
 import { RegistroUsuarioComponent } from './registro-usuario/registro-usuario.component';
 import { LoginUsuarioComponent } from './login-usuario/login-usuario.component';
->>>>>>> d3141c9f727c829dd7f905f19b17fd8861d86f47
+
 
 @NgModule({
   declarations: [
@@ -30,13 +28,11 @@ import { LoginUsuarioComponent } from './login-usuario/login-usuario.component';
     VerSupplierComponent,
     VerPerfilComponent,
     AgregarReservaComponent,
-<<<<<<< HEAD
-    MiPerfilComponent
-=======
+    MiPerfilComponent,
     BarraNavegacionComponent,
     RegistroUsuarioComponent,
     LoginUsuarioComponent
->>>>>>> d3141c9f727c829dd7f905f19b17fd8861d86f47
+
   ],
   imports: [
     BrowserModule,
