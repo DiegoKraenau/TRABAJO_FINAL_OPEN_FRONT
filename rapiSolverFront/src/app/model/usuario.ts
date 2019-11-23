@@ -5,5 +5,4 @@ export class Usuario {
     userName:string;
     userPassword:string;
     role:Role;
-
 }

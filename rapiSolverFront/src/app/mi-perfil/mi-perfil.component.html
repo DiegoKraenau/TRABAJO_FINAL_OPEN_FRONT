@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <html lang="en">
 <head>
    
@@ -150,3 +151,105 @@
 
 </body>
 </html>
+=======
+<br>
+<div class="alert alert-warning" role="alert">
+  <strong>Recuerda editar tu perfil con tus datos actualizados dandole click al botón Editar.</strong>
+</div>
+<div class="content">
+  <aside class="info ">
+    <div class="box">
+      <p class="title">
+        <i class="fa fa-info-circle"></i>Contact
+      </p>
+      <p class="padd-top">
+        <i class="fa fa-birthday-cake"></i>
+        {{persona.age}} años
+      </p>
+      <p v-for="persona in personas" :key="persona.country">
+        <i class="fa fa-home"></i>
+        {{persona.country}}
+
+      </p>
+      <strong>
+        <p class="padd-top" id="mensajeMembresia"></p>
+      </strong>
+
+      <td><a href="" v-on:click.prevent="editarPerfil" class="btn btn-light">Editar</a></td>
+      <br>
+      <a href="#" v-on:click.prevent="comprar">Comprar subscripción</a>
+    </div>
+
+
+  </aside>
+
+
+  <section class="main">
+    <div class="box">
+      <p class="title">
+        <i class="fa fa-plus-circle" aria-hidden="true"></i>
+        Servicios
+      </p>
+      <p class="padd-top" id="mensaje"></p>
+      <div class="table responsive">
+        <table class="table table-striped">
+          <thead class="thead-dark">
+            <tr>
+              <th>Id</th>
+              <th>Nombre</th>
+              <th>Categoría</th>
+              <th>Cost</th>
+
+            </tr>
+          </thead>
+          <tbody>
+            <tr v-for="servicio in servicios" :key="servicio.servicioId">
+              <td>{{servicio.servicioId}}</td>
+              <td>{{servicio.name}}</td>
+              <td>{{servicio.categoryName}}</td>
+              <td>{{servicio.cost}}</td>
+              <td><a href="#" class="btn btn-success" v-on:click.prevent="modificar(servicio.servicioId)">Modificar</a>
+              </td>
+              <td><a href="#" class="btn btn-danger" v-on:click.prevent="eliminar(servicio.servicioId)">Eliminar</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="box">
+      <p class="title">
+        <i class="fa fa-envelope" aria-hidden="true"></i>
+        Reservas
+      </p>
+      <p class="padd-top" id="reservaMensaje"></p>
+
+      <div class="table responsive">
+        <table class="table table-striped">
+          <thead class="thead-dark">
+            <tr>
+              <th>Id</th>
+              <th>Proveedor</th>
+              <th>Solicitante</th>
+              <th>Servicio</th>
+              <th>Fecha</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr v-for="reserva in reservas" :key="reserva.reservationId">
+              <td>{{reserva.reservationId}}</td>
+              <td>{{reserva.supplierName}},{{reserva.supplierLastName}}</td>
+              <td>{{reserva.usuarioName}}</td>
+              <td>{{reserva.servicioName}}</td>
+              <td>{{reserva.fecha}}</td>
+
+              <td><a href="#" class="btn btn-danger"
+                  v-on:click.prevent="deleteReservation(reserva.reservationId)">Cancelar</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+</div>
+>>>>>>> d3141c9f727c829dd7f905f19b17fd8861d86f47

@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class UsuarioService {
-  private baseURL='http://localhost:8080/api/roles';
+  private baseURL='http://localhost:8080/api/usarios';
 
   constructor(private http: HttpClient) { }
 
