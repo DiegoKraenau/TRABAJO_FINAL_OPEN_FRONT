@@ -10,6 +10,7 @@ import { MiPerfilComponent } from './mi-perfil/mi-perfil.component';
 import { LoginUsuarioComponent } from './login-usuario/login-usuario.component';
 import { RegistroUsuarioComponent } from './registro-usuario/registro-usuario.component';
 import { EditarMiperfilComponent } from './editar-miperfil/editar-miperfil.component';
+import { IndexComponent } from './index/index.component';
 
 
 const routes: Routes = [
@@ -23,7 +24,8 @@ const routes: Routes = [
   {path:'miPerfil/:id', component: MiPerfilComponent},
   {path:'login', component: LoginUsuarioComponent},
   {path: 'registro', component: RegistroUsuarioComponent},
-  {path: 'editarmiperfil/:id', component: EditarMiperfilComponent}
+  {path: 'editarmiperfil/:id', component: EditarMiperfilComponent},
+  {path: 'index', component: IndexComponent}
 
 ];
 

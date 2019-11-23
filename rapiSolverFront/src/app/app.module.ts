@@ -17,6 +17,7 @@ import { BarraNavegacionComponent } from './barra-navegacion/barra-navegacion.co
 import { RegistroUsuarioComponent } from './registro-usuario/registro-usuario.component';
 import { LoginUsuarioComponent } from './login-usuario/login-usuario.component';
 import { EditarMiperfilComponent } from './editar-miperfil/editar-miperfil.component';
+import { IndexComponent } from './index/index.component';
 
 
 @NgModule({
@@ -33,7 +34,8 @@ import { EditarMiperfilComponent } from './editar-miperfil/editar-miperfil.compo
     BarraNavegacionComponent,
     RegistroUsuarioComponent,
     LoginUsuarioComponent,
-    EditarMiperfilComponent
+    EditarMiperfilComponent,
+    IndexComponent
 
   ],
   imports: [
