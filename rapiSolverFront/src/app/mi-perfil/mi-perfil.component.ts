@@ -19,6 +19,7 @@ export class MiPerfilComponent implements OnInit {
 
   esCustomer: boolean = true;
   usuario = new Usuario();
+<<<<<<< HEAD
   customer = new Customer();
   supplier = new Supplier();
   grupoServicios: Servicio[];
@@ -26,9 +27,18 @@ export class MiPerfilComponent implements OnInit {
   rolId: number;
 
   constructor(private route: ActivatedRoute, private router: Router, private supplierService: SupplierService, private customerService: CustomerService, private usuarioService: UsuarioService, private reservationService: ReservationService) { }
+=======
+  customer= new Customer();
+  supplier=new Supplier();
+  grupoServicios:Servicio[];
+  grupoReservations:Reservation[];
+  
+  constructor(private route: ActivatedRoute,private supplierService: SupplierService,private customerService: CustomerService,private usuarioService: UsuarioService,private reservationService: ReservationService) { }
+>>>>>>> 33f035a38e78d176ef7b694e4119edab1d0c2446
 
   ngOnInit() {
     this.loadData();
+    
   }
 
   loadData() {
@@ -54,9 +64,14 @@ export class MiPerfilComponent implements OnInit {
           document.getElementById('mensajeMembresia').innerHTML = 'Su membresia se vence en 6 meses';
         }
       }
+
+
+
+
     );
   }
 
+<<<<<<< HEAD
   updatePerfil(){
     /*this.usuarioService.findByUserId(this.route.snapshot.params['id']).subscribe(datos=>this.rolId=datos.rolId);
     if (this.rolId == 1){
@@ -68,4 +83,19 @@ export class MiPerfilComponent implements OnInit {
     }*/
     this.router.navigate(['editarmiperfil',this.route.snapshot.params['id']])
   }
+=======
+  private verPerfil(codigo:number):void
+  {
+
+    window.location.href="/modificarServicio/"+codigo+"/"+this.route.snapshot.params.id
+
+  
+  }
+
+
+
+
+
+
+>>>>>>> 33f035a38e78d176ef7b694e4119edab1d0c2446
 }

@@ -20,6 +20,8 @@ import { EditarMiperfilComponent } from './editar-miperfil/editar-miperfil.compo
 import { IndexComponent } from './index/index.component';
 import { AgregarUsuarioComponent } from './agregar-usuario/agregar-usuario.component';
 import { ComprarMembresiaComponent } from './comprar-membresia/comprar-membresia.component';
+import { NombreComponent } from './nombre/nombre.component';
+import { ModificarServicioComponent } from './modificar-servicio/modificar-servicio.component';
 
 
 @NgModule({
@@ -39,7 +41,9 @@ import { ComprarMembresiaComponent } from './comprar-membresia/comprar-membresia
     EditarMiperfilComponent,
     IndexComponent,
     AgregarUsuarioComponent,
-    ComprarMembresiaComponent
+    ComprarMembresiaComponent,
+    NombreComponent,
+    ModificarServicioComponent
 
   ],
   imports: [
