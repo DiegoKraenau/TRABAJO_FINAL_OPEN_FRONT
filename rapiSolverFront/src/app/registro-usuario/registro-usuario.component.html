@@ -6,16 +6,35 @@
                 <h5 class="card-title text-center">Registrate</h5>
                 <form id="formulario" v-on:submit.prevent="post" class="form-signin" >
                     <div class="form-group" >
-                        <label >Nombre:</label> <input type="text" class="form-control" placeholder="Ingrese Nombres" minlength="5" maxlength="40" required pattern="[A-Za-z]+"> 
+                        <label for="nombres">Nombres:</label> 
+                        <input type="text" class="form-control" placeholder="Ingrese Nombres" minlength="5" maxlength="40" required pattern="[A-Za-z]+"> 
                     </div>
                     <div class="form-group" >
-                        <label >Apellido:</label> <input type="text" class="form-control" placeholder="Ingrese Apellidos" minlength="5" maxlength="40" required pattern="[A-Za-z]+">  
+                        <label for="apellidos">Apellidos:</label> 
+                        <input type="text" class="form-control" placeholder="Ingrese Apellidos" minlength="5" maxlength="40" required pattern="[A-Za-z]+">  
                     </div>
                     <div class="form-group" >
-                        <label >Email:</label> <input type="email" class="form-control" placeholder="Ingrese un email"> 
+                        <label for="telefono">Telefono:</label> 
+                        <input type="text" class="form-control" placeholder="Ingrese Telefono" minlength="7" maxlength="9">  
+                    </div>
+                    <div class="form-group">
+                        <label for="gender">Genero:</label>
+                        <select class="form-control">
+                            <option>Masculino</option>
+                            <option>Femenino</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="edad">Edad:</label>
+                        <input type="number" class="form-control" placeholder="Ingrese su edad" minlength="2">
                     </div>
                     <div class="form-group" >
-                        <label >Contraseña::</label> <input type="password" class="form-control" placeholder="Ingrese una contraseña" minlength="5" maxlength="40" > 
+                        <label for="email">Email:</label> 
+                        <input type="email" class="form-control" placeholder="Ingrese un email"> 
+                    </div>
+                    <div class="form-group" >
+                        <label for="contraseña">Contraseña::</label> 
+                        <input type="password" class="form-control" placeholder="Ingrese una contraseña" minlength="5" maxlength="40" > 
                     </div> 
                     <div class="form-group">
                         <button  type="submit"  class="btn btn-primary btn-lg">Registrarse</button>  
