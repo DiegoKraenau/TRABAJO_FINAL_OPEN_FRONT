@@ -22,11 +22,12 @@ export class MiPerfilComponent implements OnInit {
   supplier=new Supplier();
   grupoServicios:Servicio[];
   grupoReservations:Reservation[];
-
+  
   constructor(private route: ActivatedRoute,private supplierService: SupplierService,private customerService: CustomerService,private usuarioService: UsuarioService,private reservationService: ReservationService) { }
 
   ngOnInit() {
     this.loadData();
+    
   }
 
   loadData(){
@@ -52,9 +53,26 @@ export class MiPerfilComponent implements OnInit {
           document.getElementById('mensajeMembresia').innerHTML = 'Su membresia se vence en 6 meses';
         }
       }
+
+
+
+
     );
 
 
   }
+
+  private verPerfil(codigo:number):void
+  {
+
+    window.location.href="/modificarServicio/"+codigo+"/"+this.route.snapshot.params.id
+
+  
+  }
+
+
+
+
+
 
 }
