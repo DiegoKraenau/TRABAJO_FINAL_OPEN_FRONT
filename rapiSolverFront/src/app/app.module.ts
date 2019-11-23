@@ -18,6 +18,7 @@ import { RegistroUsuarioComponent } from './registro-usuario/registro-usuario.co
 import { LoginUsuarioComponent } from './login-usuario/login-usuario.component';
 import { EditarMiperfilComponent } from './editar-miperfil/editar-miperfil.component';
 import { IndexComponent } from './index/index.component';
+import { AgregarUsuarioComponent } from './agregar-usuario/agregar-usuario.component';
 import { ModificarServicioComponent } from './modificar-servicio/modificar-servicio.component';
 import { PrincipalComponent } from './principal/principal.component';
 
@@ -38,6 +39,7 @@ import { PrincipalComponent } from './principal/principal.component';
     LoginUsuarioComponent,
     EditarMiperfilComponent,
     IndexComponent,
+    AgregarUsuarioComponent,
     ModificarServicioComponent,
     PrincipalComponent
 
