@@ -26,5 +26,7 @@ export class RegistroUsuarioComponent implements OnInit {
 
   registrarUsuario(){
     let rol = this.rolService.getRoleById(1);
+    this.locationService.createLocation(this.location).subscribe(datos=>console.log(datos), error=>console.log(error));
+    
   }
 }

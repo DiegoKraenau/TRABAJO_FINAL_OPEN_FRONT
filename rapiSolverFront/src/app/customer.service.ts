@@ -22,4 +22,8 @@ export class CustomerService {
   getCustomerList(): Observable<any>{
     return this.http.get(`${this.baseURL}`);
   }
+
+  findByUserId(id:number): Observable<any>{
+    return this.http.get(`${this.baseURL}/searchByUserId/${id}`);
+  }
 }

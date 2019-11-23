@@ -1,4 +1,12 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { SupplierService } from '../supplier.service';
+import { CustomerService } from '../customer.service';
+import { UsuarioService } from '../usuario.service';
+import { Usuario } from '../model/usuario';
+import { Customer } from '../model/customer';
+import { Supplier } from '../model/supplier';
+import { Servicio } from '../model/servicio';
 
 @Component({
   selector: 'app-mi-perfil',
@@ -7,9 +15,41 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MiPerfilComponent implements OnInit {
 
-  constructor() { }
+  usuario = new Usuario();
+  customer= new Customer();
+  supplier=new Supplier();
+  grupoServicios:Servicio[];
+
+  constructor(private route: ActivatedRoute,private supplierService: SupplierService,private customerService: CustomerService,private usuarioService: UsuarioService) { }
 
   ngOnInit() {
+    this.loadData();
+  }
+
+  loadData(){
+    this.usuarioService.findByUserId(this.route.snapshot.params.id).subscribe(
+      data=>{
+        if(data.rolId==1){
+          this.customerService.findByUserId(data.id).subscribe(customer=>this.customer=customer);
+          document.getElementById('mensaje').innerHTML = 'Usted es una cliente no tiene servicios';
+          document.getElementById('reservaMensaje').innerHTML = 'Reservas hechas:';
+          document.getElementById('mensajeMembresia').innerHTML = 'No posee una membresia';
+        }
+        if(data.rolId==2){
+          this.supplierService.findByUserId(data.id).subscribe(
+            customer=>{
+              this.customer=customer;
+              this.supplierService.getServiciosListByUserId(data.id).subscribe(grupoServicios=>this.grupoServicios=grupoServicios);
+            }
+            );
+          document.getElementById('mensaje').innerHTML = 'Los servicios que proveo:';
+          document.getElementById('reservaMensaje').innerHTML = 'Reservas hechas y solicitadas:';
+          document.getElementById('mensajeMembresia').innerHTML = 'Su membresia se vence en 6 meses';
+        }
+      }
+    );
+
+
   }
 
 }
