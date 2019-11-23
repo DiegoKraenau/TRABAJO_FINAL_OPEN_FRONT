@@ -30,7 +30,7 @@ export class LoginUsuarioComponent implements OnInit {
            }
         });
         if (num==1) {
-          window.location.href="listarServicios/"+codigo
+          window.location.href="principal/"+codigo
         }
         if (num==0) {
           document.getElementById('mensaje2').style.display ='block'

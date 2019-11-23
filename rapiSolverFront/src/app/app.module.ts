@@ -21,6 +21,7 @@ import { IndexComponent } from './index/index.component';
 import { AgregarUsuarioComponent } from './agregar-usuario/agregar-usuario.component';
 import { ModificarServicioComponent } from './modificar-servicio/modificar-servicio.component';
 import { PrincipalComponent } from './principal/principal.component';
+import { MembresiaComponent } from './membresia/membresia.component';
 
 
 @NgModule({
@@ -41,7 +42,8 @@ import { PrincipalComponent } from './principal/principal.component';
     IndexComponent,
     AgregarUsuarioComponent,
     ModificarServicioComponent,
-    PrincipalComponent
+    PrincipalComponent,
+    MembresiaComponent
 
   ],
   imports: [
