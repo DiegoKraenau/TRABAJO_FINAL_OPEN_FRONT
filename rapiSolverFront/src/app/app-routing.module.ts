@@ -23,9 +23,9 @@ const routes: Routes = [
   {path:'agregarReserva/:id/:id2', component: AgregarReservaComponent},
   {path:'miPerfil/:id', component: MiPerfilComponent},
   {path:'login', component: LoginUsuarioComponent},
-  {path: 'registro', component: RegistroUsuarioComponent},
-  {path: 'editarmiperfil/:id', component: EditarMiperfilComponent},
-  {path: 'index', component: IndexComponent}
+  {path:'registro', component: RegistroUsuarioComponent},
+  {path:'editarmiperfil/:id', component: EditarMiperfilComponent},
+  {path:'index', component: IndexComponent}
 
 ];
 

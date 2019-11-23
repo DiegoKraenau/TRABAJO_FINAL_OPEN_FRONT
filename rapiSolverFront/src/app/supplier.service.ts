@@ -26,4 +26,7 @@ export class SupplierService {
   findByUserId(id: number): Observable<any>{
     return this.http.get(`${this.baseURL}/searchByUserId/${id}`);
   }
+  updateSupplier(id: number, supplier: Object): Observable<Object>{
+    return this.http.put(`${this.baseURL}/${id}`, supplier);
+  }
 }

@@ -26,4 +26,8 @@ export class CustomerService {
   findByUserId(id:number): Observable<any>{
     return this.http.get(`${this.baseURL}/searchByUserId/${id}`);
   }
+
+  updateCustomer(id: number, customer: Object): Observable<Object>{
+    return this.http.put(`${this.baseURL}/${id}`, customer);
+  }
 }
