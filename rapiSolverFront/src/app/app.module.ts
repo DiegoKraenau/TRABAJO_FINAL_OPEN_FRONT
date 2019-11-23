@@ -12,6 +12,9 @@ import { BuscarSupplierComponent } from './buscar-supplier/buscar-supplier.compo
 import { VerSupplierComponent } from './ver-supplier/ver-supplier.component';
 import { VerPerfilComponent } from './ver-perfil/ver-perfil.component';
 import { AgregarReservaComponent } from './agregar-reserva/agregar-reserva.component';
+import { BarraNavegacionComponent } from './barra-navegacion/barra-navegacion.component';
+import { RegistroUsuarioComponent } from './registro-usuario/registro-usuario.component';
+import { LoginUsuarioComponent } from './login-usuario/login-usuario.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +25,10 @@ import { AgregarReservaComponent } from './agregar-reserva/agregar-reserva.compo
     BuscarSupplierComponent,
     VerSupplierComponent,
     VerPerfilComponent,
-    AgregarReservaComponent
+    AgregarReservaComponent,
+    BarraNavegacionComponent,
+    RegistroUsuarioComponent,
+    LoginUsuarioComponent
   ],
   imports: [
     BrowserModule,
