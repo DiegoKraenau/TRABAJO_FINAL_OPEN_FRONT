@@ -131,13 +131,13 @@
 							</tr>
 						</thead>
 						<tbody>
-                <ng-container *ngFor="let detalle of detallesGroup">
+                <ng-container *ngFor="let reservation of grupoReservations">
 							<tr >
-								<td ></td>
-								<td ></td>
-                        <td >}</td>
-								<td ></td>
-								<td ></td>
+								<td >{{reservation.id}}</td>
+								<td >{{reservation.nombreProveedor}}</td>
+                <td >{{reservation.correoSolicitante}}</td>
+								<td >{{reservation.nombreServicio}}</td>
+								<td >{{reservation.fecha}}</td>
      
                         <td><a href="#" class="btn btn-danger" >Cancelar</a></td>								
               </tr>

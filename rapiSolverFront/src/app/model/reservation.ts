@@ -6,4 +6,7 @@ export class Reservation {
 	supplierId:number;
 	fecha:string;
 	note:string;
+	nombreProveedor:string;
+	correoSolicitante:string;
+	nombreServicio:string;
 }

@@ -7,6 +7,8 @@ import { Usuario } from '../model/usuario';
 import { Customer } from '../model/customer';
 import { Supplier } from '../model/supplier';
 import { Servicio } from '../model/servicio';
+import { Reservation } from '../model/reservation';
+import { ReservationService } from '../reservation.service';
 
 @Component({
   selector: 'app-mi-perfil',
@@ -19,14 +21,16 @@ export class MiPerfilComponent implements OnInit {
   customer= new Customer();
   supplier=new Supplier();
   grupoServicios:Servicio[];
+  grupoReservations:Reservation[];
 
-  constructor(private route: ActivatedRoute,private supplierService: SupplierService,private customerService: CustomerService,private usuarioService: UsuarioService) { }
+  constructor(private route: ActivatedRoute,private supplierService: SupplierService,private customerService: CustomerService,private usuarioService: UsuarioService,private reservationService: ReservationService) { }
 
   ngOnInit() {
     this.loadData();
   }
 
   loadData(){
+    
     this.usuarioService.findByUserId(this.route.snapshot.params.id).subscribe(
       data=>{
         if(data.rolId==1){
@@ -40,6 +44,7 @@ export class MiPerfilComponent implements OnInit {
             customer=>{
               this.customer=customer;
               this.supplierService.getServiciosListByUserId(data.id).subscribe(grupoServicios=>this.grupoServicios=grupoServicios);
+              this.reservationService.findByUserId(data.id).subscribe(grupoReservations=>this.grupoReservations=grupoReservations);
             }
             );
           document.getElementById('mensaje').innerHTML = 'Los servicios que proveo:';

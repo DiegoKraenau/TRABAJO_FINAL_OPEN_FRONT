@@ -14,5 +14,8 @@ export class ReservationService {
     return this.http.post(`${this.baseURL}`, reserva);
   }
 
+  findByUserId(id:number): Observable<any>{
+    return this.http.get(`${this.baseURL}/reservationByUserId/${id}`);
+  }
  
 }
