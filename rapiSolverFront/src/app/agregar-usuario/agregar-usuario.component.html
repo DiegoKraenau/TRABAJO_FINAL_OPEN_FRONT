@@ -1,0 +1,67 @@
+<html lang="en">
+<head>
+    <!-- Custom fonts for this template -->
+<link href="../assets/static/vendor/fontawesome-free/css/all.min.css" rel="stylesheet"
+	type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700"
+	rel="stylesheet" type="text/css">
+<link href='https://fonts.googleapis.com/css?family=Kaushan+Script'
+	rel='stylesheet' type='text/css'>
+<link
+	href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic'
+	rel='stylesheet' type='text/css'>
+<link
+	href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700'
+	rel='stylesheet' type='text/css'>
+
+<!-- Custom styles for this template -->
+
+</head>
+<body>
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <a class="navbar-brand" id="logo" href="http://localhost:8080/Inicio">RapiSolver</a>
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a class="nav-link" href="http://localhost:8080/Inicio">Inicio Sesion</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">¿Quienes somos?</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="mensaje2" class="alert alert-success " style="display: none">
+            <strong> <p class="padd-top" id="mensaje"></p></strong>
+    </div>
+    <br>
+
+    <div id="labelCrearUsuario"><h2>Registrar Usuario</h2></div><br>
+ 
+ 
+	<form id="formulario" (ngSubmit)="registrarUsuario()" class="form-signin" >
+        
+		<div class="form-group" >
+			<label >Nombre:</label> <input type="text" class="form-control col-lg-3 col-md-3 col-xs-12" id="name" name="name" required [(ngModel)]="customer.name" placeholder="Ingrese Nombres"  minlength="5" maxlength="40" required pattern="[A-Za-z]+"> 
+		</div>
+		<div class="form-group" >
+			<label >Apellido:</label> <input type="text" class="form-control col-lg-3 col-md-3 col-xs-12" id="lastName" name="lastName" required [(ngModel)]="customer.lastName" placeholder="Ingrese Apellidos"  minlength="5" maxlength="40" required pattern="[A-Za-z]+">  
+		</div>
+		<div class="form-group" >
+			<label >Email:</label> <input type="email" class="form-control col-lg-3 col-md-3 col-xs-12" id="email" name="email" required [(ngModel)]="customer.email" placeholder="Ingrese un email" > 
+		</div>
+        <div class="form-group" >
+			<label >Contraseña::</label> <input type="password"  class="form-control col-lg-3 col-md-3 col-xs-12" id="userPassword" name="userPassword" required [(ngModel)]="customer.userPassword" placeholder="Ingrese una contraseña"  minlength="5" maxlength="40"  > 
+		</div> 
+        <div class="form-group">
+            <button  type="submit"  class="btn btn-primary btn-lg">Agregar</button>  
+            <br>
+            <br>
+            <a class="enu" href="/Inicio" style="color:#000000">No , gracias</a>   
+        </div>  
+	</form>
+
+
+
+</body>
+</html>

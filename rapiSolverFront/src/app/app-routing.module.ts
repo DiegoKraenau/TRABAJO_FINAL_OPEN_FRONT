@@ -11,6 +11,7 @@ import { LoginUsuarioComponent } from './login-usuario/login-usuario.component';
 import { RegistroUsuarioComponent } from './registro-usuario/registro-usuario.component';
 import { EditarMiperfilComponent } from './editar-miperfil/editar-miperfil.component';
 import { IndexComponent } from './index/index.component';
+import { AgregarUsuarioComponent } from './agregar-usuario/agregar-usuario.component';
 
 
 const routes: Routes = [
@@ -25,7 +26,8 @@ const routes: Routes = [
   {path:'login', component: LoginUsuarioComponent},
   {path: 'registro', component: RegistroUsuarioComponent},
   {path: 'editarmiperfil/:id', component: EditarMiperfilComponent},
-  {path: 'index', component: IndexComponent}
+  {path: 'index', component: IndexComponent},
+  {path: 'agregarUsuario', component: AgregarUsuarioComponent},
 
 ];
 

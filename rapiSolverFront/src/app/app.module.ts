@@ -18,6 +18,7 @@ import { RegistroUsuarioComponent } from './registro-usuario/registro-usuario.co
 import { LoginUsuarioComponent } from './login-usuario/login-usuario.component';
 import { EditarMiperfilComponent } from './editar-miperfil/editar-miperfil.component';
 import { IndexComponent } from './index/index.component';
+import { AgregarUsuarioComponent } from './agregar-usuario/agregar-usuario.component';
 
 
 @NgModule({
@@ -35,7 +36,8 @@ import { IndexComponent } from './index/index.component';
     RegistroUsuarioComponent,
     LoginUsuarioComponent,
     EditarMiperfilComponent,
-    IndexComponent
+    IndexComponent,
+    AgregarUsuarioComponent
 
   ],
   imports: [
