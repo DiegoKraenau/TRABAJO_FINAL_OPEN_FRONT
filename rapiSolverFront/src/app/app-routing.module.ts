@@ -9,7 +9,7 @@ import { AgregarReservaComponent } from './agregar-reserva/agregar-reserva.compo
 import { MiPerfilComponent } from './mi-perfil/mi-perfil.component';
 import { LoginUsuarioComponent } from './login-usuario/login-usuario.component';
 import { RegistroUsuarioComponent } from './registro-usuario/registro-usuario.component';
-
+import { EditarMiperfilComponent } from './editar-miperfil/editar-miperfil.component';
 
 
 const routes: Routes = [
@@ -22,7 +22,8 @@ const routes: Routes = [
   {path:'agregarReserva/:id/:id2', component: AgregarReservaComponent},
   {path:'miPerfil/:id', component: MiPerfilComponent},
   {path:'login', component: LoginUsuarioComponent},
-  {path: 'registro', component: RegistroUsuarioComponent}
+  {path: 'registro', component: RegistroUsuarioComponent},
+  {path: 'editarmiperfil/:id', component: EditarMiperfilComponent}
 
 ];
 
